@@ -15,7 +15,7 @@ import com.SpringBoot.Rest.dto.SmartPhone;
 public interface SmartPhoneRepositry extends JpaRepository<SmartPhone, Integer>
 {
 	@Modifying
-	@Query("UPDATE SmartPhone SET price = ?1 , brand = ?2, spec = ?3 WHERE id = ?4")
+	@Query("UPDATE SmartPhone SET price = ?1 , brand = ?2 WHERE id = ?3")
 	@Transactional
-	void updateSmartPhone(int price, String brand, String spec, int id);
+	void updateSmartPhone(int price, String brand, int id);
 }

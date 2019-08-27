@@ -29,7 +29,7 @@ public class SmartPhoneController
 	@PutMapping(path = "/updateSmartPhone/{id}")
 	public List<SmartPhone> updateSmartPhone(@RequestBody SmartPhone smartPhone, @PathVariable int id )
 	{
-		smartPhoneRepo.updateSmartPhone(smartPhone.getPrice(), smartPhone.getBrand(), smartPhone.getSpec(), id);
+		smartPhoneRepo.updateSmartPhone(smartPhone.getPrice(), smartPhone.getBrand(), id);
 		return smartPhoneRepo.findAll();
 	}
 	
