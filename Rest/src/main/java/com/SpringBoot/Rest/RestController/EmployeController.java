@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.SpringBoot.Rest.dto.EmployeDetails;
-import com.SpringBoot.Rest.service.EmployeServiceImpl;
+import com.SpringBoot.Rest.service.EmployeService;
 
 @RestController
 public class EmployeController
 {
 	@Autowired
-	private EmployeServiceImpl employeService;
+	private EmployeService employeService;
 	
 	@GetMapping(path = "/getAllEmploye")
 	public List<EmployeDetails> getAllEmployes()
